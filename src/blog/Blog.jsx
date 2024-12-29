@@ -5,7 +5,7 @@ import AppAppBar from './components/AppAppBar';
 import MainContent from './components/MainContent';
 import Latest from './components/Latest';
 import Footer from './components/Footer';
-import AppTheme from '../shared-theme/AppTheme';
+import AppTheme from '../theme/AppTheme';
 
 export default function Blog(props) {
   return (

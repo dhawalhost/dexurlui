@@ -10,7 +10,7 @@ import Features from './components/Features';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
-import AppTheme from '../shared-theme/AppTheme';
+import AppTheme from '../theme/AppTheme';
 
 export default function LandingPage(props) {
   return (
