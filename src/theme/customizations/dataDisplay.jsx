@@ -97,6 +97,7 @@ export const dataDisplayCustomizations = {
         [`& .${chipClasses.label}`]: {
           fontWeight: 600,
         },
+        ...theme.glassmorphism,
         variants: [
           {
             props: {

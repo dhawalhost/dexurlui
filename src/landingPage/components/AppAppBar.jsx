@@ -52,7 +52,7 @@ export default function AppAppBar() {
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
             <Sitemark />
-            <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            {/* <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
               <Button variant="text" color="info" size="small">
                 Features
               </Button>
@@ -71,9 +71,9 @@ export default function AppAppBar() {
               <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
                 Blog
               </Button>
-            </Box>
+            </Box> */}
           </Box>
-          <Box
+          {/* <Box
             sx={{
               display: { xs: 'none', md: 'flex' },
               gap: 1,
@@ -87,10 +87,10 @@ export default function AppAppBar() {
               Sign up
             </Button>
             <ColorModeIconDropdown />
-          </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>
+          </Box> */}
+          <Box sx={{ display: { xs: 'flex', md: 'flex' }, gap: 1 }}>
             <ColorModeIconDropdown size="medium" />
-            <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
+            {/* <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
               <MenuIcon />
             </IconButton>
             <Drawer
@@ -133,7 +133,7 @@ export default function AppAppBar() {
                   </Button>
                 </MenuItem>
               </Box>
-            </Drawer>
+            </Drawer> */}
           </Box>
         </StyledToolbar>
       </Container>

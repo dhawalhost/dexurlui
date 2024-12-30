@@ -145,8 +145,8 @@ export default function Features() {
   const selectedFeature = items[selectedItemIndex];
 
   return (
-    <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
-      <Box sx={{ width: { sm: '100%', md: '60%' } }}>
+    <Container id="features" sx={{ py: { xs: 4, sm: 16 } }}>
+      <Box sx={{ width: { sm: '100%', md: '100%' } }}>
         <Typography
           component="h2"
           variant="h4"
@@ -164,7 +164,7 @@ export default function Features() {
           add-ons.
         </Typography>
       </Box>
-      <Box
+      {/* <Box
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row-reverse' },
@@ -268,7 +268,7 @@ export default function Features() {
             />
           </Card>
         </Box>
-      </Box>
+      </Box> */}
     </Container>
   );
 }

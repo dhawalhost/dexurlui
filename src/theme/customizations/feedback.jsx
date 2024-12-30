@@ -13,9 +13,11 @@ export const feedbackCustomizations = {
         '& .MuiAlert-icon': {
           color: orange[500],
         },
+        ...theme.glassmorphism,
         ...theme.applyStyles('dark', {
           backgroundColor: `${alpha(orange[900], 0.5)}`,
           border: `1px solid ${alpha(orange[800], 0.5)}`,
+          ...theme.glassmorphism,
         }),
       }),
     },
@@ -27,6 +29,7 @@ export const feedbackCustomizations = {
           borderRadius: '10px',
           border: '1px solid',
           borderColor: (theme.vars || theme).palette.divider,
+          ...theme.glassmorphism,
         },
       }),
     },

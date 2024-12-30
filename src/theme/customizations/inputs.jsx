@@ -33,6 +33,7 @@ export const inputsCustomizations = {
         boxShadow: 'none',
         borderRadius: (theme.vars || theme).shape.borderRadius,
         textTransform: 'none',
+        ...theme.glassmorphism,
         variants: [
           {
             props: {
@@ -399,6 +400,7 @@ export const inputsCustomizations = {
             borderColor: gray[500],
           },
         }),
+        ...theme.glassmorphism,
         variants: [
           {
             props: {

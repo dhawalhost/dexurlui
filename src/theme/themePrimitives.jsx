@@ -15,6 +15,7 @@ export const brand = {
   700: 'hsl(210, 100%, 35%)',
   800: 'hsl(210, 100%, 16%)',
   900: 'hsl(210, 100%, 21%)',
+  1400:'hsl(265, 100%, 45.90%)',
 };
 
 export const gray = {
@@ -212,6 +213,11 @@ export const getDesignTokens = (mode) => {
       borderRadius: 8,
     },
     shadows: customShadows,
+    glassmorphism: {
+      background: 'rgba(255, 255, 255, 0.1)',
+      backdropFilter: 'blur(10px)',
+      border: '1px solid rgba(255, 255, 255, 0.2)',
+    },
   };
 };
 
@@ -220,7 +226,7 @@ export const colorSchemes = {
     palette: {
       primary: {
         light: brand[200],
-        main: brand[400],
+        main: brand[1400],
         dark: brand[700],
         contrastText: brand[50],
       },
@@ -265,13 +271,18 @@ export const colorSchemes = {
       baseShadow:
         'hsla(220, 30%, 5%, 0.07) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.07) 0px 8px 16px -5px',
     },
+    glassmorphism: {
+      background: 'rgba(255, 255, 255, 0.1)',
+      backdropFilter: 'blur(10px)',
+      border: '1px solid rgba(255, 255, 255, 0.2)',
+    },
   },
   dark: {
     palette: {
       primary: {
         contrastText: brand[50],
         light: brand[300],
-        main: brand[400],
+        main: brand[1400],
         dark: brand[700],
       },
       info: {
@@ -313,6 +324,11 @@ export const colorSchemes = {
       },
       baseShadow:
         'hsla(220, 30%, 5%, 0.7) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.8) 0px 8px 16px -5px',
+    },
+    glassmorphism: {
+      background: 'rgba(0, 0, 0, 0.1)',
+      backdropFilter: 'blur(10px)',
+      border: '1px solid rgba(0, 0, 0, 0.2)',
     },
   },
 };
