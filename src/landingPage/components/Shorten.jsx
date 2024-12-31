@@ -14,6 +14,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import IconButton from "@mui/material/IconButton";
 import { visuallyHidden } from "@mui/utils";
 import { ContentCopy } from '@mui/icons-material';
+import { gray } from "../../theme/themePrimitives";
 
 
 
@@ -53,7 +54,7 @@ export default function Shorten() {
         <Stack
           spacing={2}
           useFlexGap
-          sx={{ alignItems: "center", width: { xs: "100%", sm: "70%" } }}
+          sx={{ alignItems: "center", width: { xs: "100%", sm: "90%" } }}
         >
           <Typography
             variant="h1"
@@ -77,7 +78,7 @@ export default function Shorten() {
                 }),
               })}
             >
-              Share Short
+              Share&nbsp;Short
             </Typography>
           </Typography>
           <Typography
@@ -95,7 +96,7 @@ export default function Shorten() {
           <Card
             sx={{
               maxWidth: 600,
-              width: { sm: "100%", md: "80%" },
+              width: { sm: "100%", md: "100%" },
               textAlign: "center",
               backgroundColor: "grey.100",
             }}

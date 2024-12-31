@@ -3,16 +3,17 @@ import { styled, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
+// import Button from '@mui/material/Button';
+// import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
-import Divider from '@mui/material/Divider';
-import MenuItem from '@mui/material/MenuItem';
-import Drawer from '@mui/material/Drawer';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import Sitemark from './SitemarkIcon';
+// import Divider from '@mui/material/Divider';
+// import MenuItem from '@mui/material/MenuItem';
+// import Drawer from '@mui/material/Drawer';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+// import Sitemark from './SitemarkIcon';
 import ColorModeIconDropdown from '../../theme/ColorModeIconDropdown';
+import { Typography } from '@mui/material';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -51,7 +52,10 @@ export default function AppAppBar() {
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
-            <Sitemark />
+            {/* <Sitemark /> */}
+            <Typography variant="h6" component="div" color='text.primary'>
+              &nbsp;DexURL
+              </Typography>
             {/* <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
               <Button variant="text" color="info" size="small">
                 Features
