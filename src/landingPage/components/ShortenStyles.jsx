@@ -14,6 +14,7 @@ export const StyledBox = styled(Box)(({ theme }) => ({
     ...(theme.applyStyles && theme.applyStyles("dark", {
         backgroundImage:
         "radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 16%), transparent)",
+        ...(theme.darkGlassmorphism || {}),
     })),
     ...(theme.glassmorphism || {}),
 }));

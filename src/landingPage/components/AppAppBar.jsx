@@ -3,17 +3,17 @@ import { styled, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-// import Button from '@mui/material/Button';
-// import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
-// import Divider from '@mui/material/Divider';
-// import MenuItem from '@mui/material/MenuItem';
-// import Drawer from '@mui/material/Drawer';
-// import MenuIcon from '@mui/icons-material/Menu';
-// import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import Divider from '@mui/material/Divider';
+import MenuItem from '@mui/material/MenuItem';
+import Drawer from '@mui/material/Drawer';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import Sitemark from './SitemarkIcon';
 import ColorModeIconDropdown from '../../theme/ColorModeIconDropdown';
-// import { Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -21,7 +21,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   justifyContent: 'space-between',
   flexShrink: 0,
   borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
-  backdropFilter: 'blur(24px)',
+  backdropFilter: 'blur(10px)',
   border: '1px solid',
   borderColor: (theme.vars || theme).palette.divider,
   backgroundColor: theme.vars
@@ -29,6 +29,15 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     : alpha(theme.palette.background.default, 0.4),
   boxShadow: (theme.vars || theme).shadows[1],
   padding: '8px 12px',
+  
+  ...theme.applyStyles('dark',{
+    background: 'rgba( 255, 255, 255, 0.15 )',
+  boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )',
+  backdropFilter: 'blur( 24px )',
+  WebkitBackdropFilter: 'blur( 20px )',
+  borderRadius: '10px',
+  border: '1px solid rgba( 255, 255, 255, 0.18 )'
+  })
 }));
 
 export default function AppAppBar() {
@@ -92,11 +101,12 @@ export default function AppAppBar() {
           </Box> */}
           <Box sx={{ display: { xs: 'flex', md: 'flex' }, gap: 1 }}>
             <ColorModeIconDropdown size="medium" />
-            {/* <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
+            
+            <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
               <MenuIcon />
             </IconButton>
             <Drawer
-              anchor="top"
+              anchor="right"
               open={open}
               onClose={toggleDrawer(false)}
               PaperProps={{
@@ -105,7 +115,7 @@ export default function AppAppBar() {
                 },
               }}
             >
-              <Box sx={{ p: 2, backgroundColor: 'background.default' }}>
+              <Box sx={{ p: 2, backgroundColor: 'background.default', width: "100vw", maxWidth: 640, height: "100vh" }}>
                 <Box
                   sx={{
                     display: 'flex',
@@ -116,8 +126,8 @@ export default function AppAppBar() {
                     <CloseRoundedIcon />
                   </IconButton>
                 </Box>
-
-                <MenuItem>Features</MenuItem>
+                  
+                {/* <MenuItem>Features</MenuItem>
                 <MenuItem>Testimonials</MenuItem>
                 <MenuItem>Highlights</MenuItem>
                 <MenuItem>Pricing</MenuItem>
@@ -133,9 +143,9 @@ export default function AppAppBar() {
                   <Button color="primary" variant="outlined" fullWidth>
                     Sign in
                   </Button>
-                </MenuItem>
+                </MenuItem> */}
               </Box>
-            </Drawer> */}
+            </Drawer>
           </Box>
         </StyledToolbar>
       </Container>

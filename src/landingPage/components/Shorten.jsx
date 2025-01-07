@@ -98,7 +98,7 @@ export default function Shorten() {
               maxWidth: 600,
               width: { sm: "100%", md: "100%" },
               textAlign: "center",
-              backgroundColor: "grey.100",
+              // backgroundColor: (theme)=> theme.palette.mode=="dark"? 'rgba(255, 255, 255, 0.01)':'rgba(255, 255, 255, 0.75)'
             }}
             
           >
@@ -119,7 +119,7 @@ export default function Shorten() {
                 direction={{ xs: "column", sm: "row" }}
                 spacing={1}
                 useFlexGap
-                sx={{ mt: 2, p: 2, width: { xs: "100%", sm: "500px" }, borderRadius: 1, backgroundColor: "white" }}
+                sx={{ mt: 2, p: 2, width: { xs: "100%", sm: "500px" }, borderRadius: 1, backgroundColor: (theme)=> theme.palette.mode=="dark"? 'rgba(255, 255, 255, 0.28)':'rgba(255, 255, 255, 0.75)' ,  color: (theme)=> theme.palette.text.secondary}}
               >
                 <InputLabel 
                   htmlFor="shorten-label"
@@ -166,7 +166,7 @@ export default function Shorten() {
                   alignItems="center"
                   justifyContent="center"
                   spacing={1}
-                  sx={{ mt: 2, p: 2, width: { xs: "100%", sm: "500px" }, borderRadius: 1, backgroundColor: "white" }}
+                  sx={{ mt: 2, p: 2, width: { xs: "100%", sm: "500px" }, borderRadius: 1, backgroundColor: (theme)=> theme.palette.mode=="dark"? 'rgba(255, 255, 255, 0.28)':'rgba(255, 255, 255, 0.75)' ,  color: (theme)=> theme.palette.text.secondary}}
                   
                 >
 

@@ -17,7 +17,7 @@ export const feedbackCustomizations = {
         ...theme.applyStyles('dark', {
           backgroundColor: `${alpha(orange[900], 0.5)}`,
           border: `1px solid ${alpha(orange[800], 0.5)}`,
-          ...theme.glassmorphism,
+          ...theme.darkGlassmorphism,
         }),
       }),
     },
@@ -40,8 +40,10 @@ export const feedbackCustomizations = {
         height: 8,
         borderRadius: 8,
         backgroundColor: gray[200],
+        ...theme.glassmorphism,
         ...theme.applyStyles('dark', {
           backgroundColor: gray[800],
+          ...theme.darkGlassmorphism
         }),
       }),
     },

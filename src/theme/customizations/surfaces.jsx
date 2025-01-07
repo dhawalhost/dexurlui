@@ -1,8 +1,14 @@
-import {  } from '@mui/material/styles';
 import { gray } from '../themePrimitives';
-
 /* eslint-disable import/prefer-default-export */
 export const surfacesCustomizations = {
+  MuiCssBaseline: {
+    styleOverrides: (themeParam) => ({
+      body:{
+          backgroundColor: themeParam.palette.mode == 'dark'? '#111927':'#50E3C2',
+          backgroundImage: themeParam.palette.mode == 'dark' ? 'radial-gradient(at 47% 33%, hsl(162.14, 93%, 27%) 0, transparent 59%), radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%)':'radial-gradient(at 47% 33%, hsl(159.62, 77%, 40%) 0, transparent 59%), radial-gradient(at 82% 65%, hsl(198.00, 100%, 50%) 0, transparent 55%)',
+      },
+    })
+  },
   MuiAccordion: {
     defaultProps: {
       elevation: 0,
@@ -57,8 +63,7 @@ export const surfacesCustomizations = {
     },
     styleOverrides: {
       root: ({ theme }) => ({
-        ...theme.glassmorphism,
-        backdropFilter: 'blur(10px)',
+        // backdropFilter: 'blur(10px)',
         backgroundColor: ((theme.vars || theme).palette.background.default, 0.8),
       }),
     },
@@ -70,14 +75,15 @@ export const surfacesCustomizations = {
           padding: 16,
           gap: 16,
           transition: 'all 100ms ease',
-          backdropFilter: 'blur(10px)',
           backgroundColor: (gray[50], 0.8),
           borderRadius: (theme.vars || theme).shape.borderRadius,
           border: `1px solid ${(theme.vars || theme).palette.divider}`,
           boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
           ...theme.applyStyles('dark', {
-            backgroundColor: (gray[800], 0.8),
+            // backgroundColor: (gray[800], 0.8),
+            ...theme.glassmorphism
           }),
+          ...theme.glassmorphism,
           variants: [
             {
               props: {
@@ -88,7 +94,8 @@ export const surfacesCustomizations = {
                 boxShadow: 'none',
                 background: ('hsl(0, 0%, 100%)', 0.8),
                 ...theme.applyStyles('dark', {
-                  background: (gray[900], 0.4),
+                  // background: (gray[900], 0.4),
+                  ...theme.glassmorphism
                 }),
               },
             },
@@ -118,5 +125,5 @@ export const surfacesCustomizations = {
         padding: 0,
       },
     },
-  },
+  }
 };

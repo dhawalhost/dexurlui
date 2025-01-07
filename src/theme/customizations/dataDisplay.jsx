@@ -25,6 +25,10 @@ export const dataDisplayCustomizations = {
           width: '1rem',
           height: '1rem',
           color: (theme.vars || theme).palette.text.secondary,
+          ...theme.glassmorphism,
+        ...theme.applyStyles('dark', {
+          ...theme.darkGlassmorphism,
+        }),
         },
         [`& .${typographyClasses.root}`]: {
           fontWeight: 500,
@@ -51,7 +55,15 @@ export const dataDisplayCustomizations = {
           '&:focus-visible': {
             backgroundColor: 'transparent',
           },
+          ...theme.glassmorphism,
+        ...theme.applyStyles('dark', {
+          ...theme.darkGlassmorphism,
+        }),
         },
+        ...theme.glassmorphism,
+        ...theme.applyStyles('dark', {
+          ...theme.darkGlassmorphism,
+        }),
       }),
     },
   },
@@ -121,6 +133,7 @@ export const dataDisplayCustomizations = {
                 [`& .${chipClasses.icon}`]: {
                   color: gray[300],
                 },
+                ...theme.darkGlassmorphism,
               }),
             },
           },
