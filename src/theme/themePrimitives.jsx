@@ -147,7 +147,7 @@ export const getDesignTokens = (mode) => {
       grey: {
         ...gray,
       },
-      divider: mode === 'dark' ? alpha(gray[700], 0.6) : alpha(gray[300], 0.4),
+      divider: mode === 'dark' ? alpha(gray[300], 0.6) : alpha(gray[900], 0.4),
       background: {
         default: 'hsl(0, 0%, 99%)',
         paper: 'hsl(220, 35%, 97%)',
@@ -221,20 +221,20 @@ export const getDesignTokens = (mode) => {
       },
     },
     shape: {
-      borderRadius: 8,
+      borderRadius: 12,
     },
     shadows: customShadows,
     glassmorphism: {
       borderRadius: '12px',
-      backdropFilter: 'blur(16px) saturate(180%)',
-      border: '1px solid rgba(209, 213, 219, 0.3)',
-      background: 'rgba(255, 255, 255, 0.75)',
-      WebkitBackdropFilter: 'blur(10px) saturate(180%)',
+      backdropFilter: 'blur(24px)',
+      border: '1px solid rgba(255,255,255,0.06)',
+      background: 'rgba(255,255,255,0.06)',
+      WebkitBackdropFilter: 'blur(24px)',
     },
     darkGlassmorphism: {
-      backdropFilter: 'blur(16px) saturate(180%)',
-      WebkitBackdropFilter: 'blur(16px) saturate(180%)',
-      backgroundColor: 'rgba(17, 25, 40, 0.75)',
+      backdropFilter: 'blur(24px)',
+      WebkitBackdropFilter: 'blur(24px)',
+      backgroundColor: 'rgba(255,255,255,0.06)',
       borderRadius: '12px',
       border: '1px solid rgba(255, 255, 255, 0.125)'
     }
@@ -289,14 +289,14 @@ export const colorSchemes = {
         selected: `${alpha(gray[200], 0.3)}`,
       },
       baseShadow:
-        'hsla(220, 30%, 5%, 0.07) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.07) 0px 8px 16px -5px',
+        'hsla(220, 30%, 5%, 0.3) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.4) 0px 8px 16px -5px',
     },
     glassmorphism: {
       borderRadius: '12px',
-      backdropFilter: 'blur(16px) saturate(180%)',
+      backdropFilter: 'blur(24px)',
       border: '1px solid rgba(209, 213, 219, 0.3)',
-      background: 'rgba(255, 255, 255, 0.75)',
-      WebkitBackdropFilter: 'blur(10px) saturate(180%)',
+      background: 'rgba(255,255,255,0.06)',
+      WebkitBackdropFilter: 'blur(24px)',
     },
   },
   dark: {
@@ -348,9 +348,9 @@ export const colorSchemes = {
         'hsla(220, 30%, 5%, 0.7) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.8) 0px 8px 16px -5px',
     },
     glassmorphism: {
-      backdropFilter: 'blur(16px) saturate(180%)',
-      WebkitBackdropFilter: 'blur(16px) saturate(180%)',
-      backgroundColor: 'rgba(17, 25, 40, 0.75)',
+      backdropFilter: 'blur(24px)',
+      WebkitBackdropFilter: 'blur(24px)',
+      backgroundColor: 'rgba(255, 255, 255, 0.06)',
       borderRadius: '12px',
       border: '1px solid rgba(255, 255, 255, 0.125)'
     }
@@ -408,7 +408,7 @@ export const typography = {
 };
 
 export const shape = {
-  borderRadius: 8,
+  borderRadius: 12,
 };
 
 const defaultShadows = [

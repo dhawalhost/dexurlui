@@ -32,10 +32,11 @@ export const inputsCustomizations = {
       root: ({ theme }) => ({
         boxShadow: 'none',
         borderRadius: (theme.vars || theme).shape.borderRadius,
+        // boxShadow: (theme.vars || theme).shadows[1],
         textTransform: 'none',
         ...theme.glassmorphism,
         ...theme.applyStyles('dark', {
-          ...theme.darkGlassmorphism,
+          // boxShadow: (theme.vars || theme).shadows[1],
         }),
         variants: [
           {
@@ -89,7 +90,7 @@ export const inputsCustomizations = {
                 '&:active': {
                   backgroundColor: gray[800],
                 },
-                ...theme.glassmorphism,
+                // ...theme.glassmorphism,
               }),
             },
           },
@@ -214,10 +215,10 @@ export const inputsCustomizations = {
               ...theme.applyStyles('dark', {
                 color: brand[100],
                 '&:hover': {
-                  backgroundColor: alpha(brand[900], 0.5),
+                  backgroundColor: alpha(brand[800], 0.5),
                 },
                 '&:active': {
-                  backgroundColor: alpha(brand[900], 0.3),
+                  backgroundColor: alpha(brand[800], 0.3),
                 },
               }),
             },
@@ -247,16 +248,17 @@ export const inputsCustomizations = {
         },
         ...theme.glassmorphism,
         ...theme.applyStyles('dark', {
-          backgroundColor: gray[800],
+          ...theme.glassmorphism,
+          backgroundColor: gray[700],
           borderColor: gray[700],
           '&:hover': {
             backgroundColor: gray[900],
-            borderColor: gray[600],
+            borderColor: gray[900],
           },
           '&:active': {
-            backgroundColor: gray[900],
+            backgroundColor: gray[800],
           },
-          ...theme.darkGlassmorphism
+          // ...theme.darkGlassmorphism
         }),
         variants: [
           {
@@ -286,18 +288,18 @@ export const inputsCustomizations = {
   MuiToggleButtonGroup: {
     styleOverrides: {
       root: ({ theme }) => ({
-        borderRadius: '10px',
+        // borderRadius: '10px',
         boxShadow: `0 4px 16px ${alpha(gray[400], 0.2)}`,
         [`& .${toggleButtonGroupClasses.selected}`]: {
           color: brand[500],
         },
-        ...theme.glassmorphism,
+        // ...theme.glassmorphism,
         ...theme.applyStyles('dark', {
           [`& .${toggleButtonGroupClasses.selected}`]: {
             color: '#fff',
           },
           boxShadow: `0 4px 16px ${alpha(brand[700], 0.5)}`,
-          ...theme.darkGlassmorphism,
+          // ...theme.darkGlassmorphism,
         }),
       }),
     },
@@ -307,16 +309,16 @@ export const inputsCustomizations = {
       root: ({ theme }) => ({
         padding: '12px 16px',
         textTransform: 'none',
-        borderRadius: '10px',
+        // borderRadius: '10px',
         fontWeight: 500,
-        ...theme.glassmorphism,
+        // ...theme.glassmorphism,
         ...theme.applyStyles('dark', {
           color: gray[400],
           boxShadow: '0 4px 16px rgba(0, 0, 0, 0.5)',
           [`&.${toggleButtonClasses.selected}`]: {
             color: brand[300],
           },
-          ...theme.darkGlassmorphism,
+          // ...theme.darkGlassmorphism,
         }),
       }),
     },
@@ -335,7 +337,7 @@ export const inputsCustomizations = {
         margin: 10,
         height: 16,
         width: 16,
-        borderRadius: 5,
+        // borderRadius: 5,
         border: '1px solid ',
         borderColor: alpha(gray[300], 0.8),
         boxShadow: '0 0 0 1.5px hsla(210, 0%, 0%, 0.04) inset',
@@ -358,7 +360,6 @@ export const inputsCustomizations = {
             backgroundColor: brand[600],
           },
         },
-        ...theme.glassmorphism,
         ...theme.applyStyles('dark', {
           borderColor: alpha(gray[700], 0.8),
           boxShadow: '0 0 0 1.5px hsl(210, 0%, 0%) inset',
@@ -380,16 +381,8 @@ export const inputsCustomizations = {
     styleOverrides: {
       root: ({theme})=>({
         border: 'none',
-        ...theme.glassmorphism,
         ...theme.applyStyles('dark', {
-          ...theme.glassmorphism,
-          // color: (theme.vars || theme).palette.text.primary,
-          // backdrop-filter: blur(16px) saturate(180%);
-          // -webkit-backdrop-filter: blur(16px) saturate(180%);
-          // background-color: rgba(17, 25, 40, 0.75);
-          // border-radius: 12px;
-          // border: '1px solid rgba(231, 60, 60, 0.13) !important ',
-
+          color: (theme.vars || theme).palette.text.primary,
         }),
       }),
       input: ({ theme }) => ({
@@ -408,7 +401,6 @@ export const inputsCustomizations = {
       root: ({ theme }) => ({
         padding: '8px 12px',
         color: (theme.vars || theme).palette.text.primary,
-        borderRadius: (theme.vars || theme).shape.borderRadius,
         border: `1px solid ${(theme.vars || theme).palette.divider}`,
         borderColor: gray[200],
         backgroundColor: (theme.vars || theme).palette.background.default,
@@ -420,12 +412,10 @@ export const inputsCustomizations = {
           outline: `3px solid ${alpha(brand[500], 0.5)}`,
           borderColor: brand[400],
         },
-        // ...theme.glassmorphism,
         ...theme.applyStyles('dark', {
           '&:hover': {
             borderColor: gray[500],
           },
-        // ...theme.darkGlassmorphism,
         }),
         variants: [
           {
@@ -455,10 +445,7 @@ export const inputsCustomizations = {
     styleOverrides: {
       root: ({ theme }) => ({
         color: (theme.vars || theme).palette.grey[500],
-        ...theme.glassmorphism,
         ...theme.applyStyles('dark', {
-          // color: (theme.vars || theme).palette.grey[400],
-          ...theme.darkGlassmorphism,
         }),
       }),
     },

@@ -31,16 +31,6 @@ export default function Shorten() {
   return (
     <Box
       id="shorten"
-      sx={(theme) => ({
-        width: "100%",
-        backgroundRepeat: "no-repeat",
-        backgroundImage:
-          "radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 90%), transparent)",
-        ...theme.applyStyles("dark", {
-          backgroundImage:
-            "radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 16%), transparent)",
-        }),
-      })}
     >
       <Container
         sx={{
@@ -108,7 +98,7 @@ export default function Shorten() {
                 alignItems: "center",
                 display: "flex",
                 flexDirection: "column",
-                margin: 3,
+                margin: 1,
               }}
             >
               <Typography gutterBottom variant="h5" component="div">
@@ -119,7 +109,7 @@ export default function Shorten() {
                 direction={{ xs: "column", sm: "row" }}
                 spacing={1}
                 useFlexGap
-                sx={{ mt: 2, p: 2, width: { xs: "100%", sm: "500px" }, borderRadius: 1, backgroundColor: (theme)=> theme.palette.mode=="dark"? 'rgba(255, 255, 255, 0.28)':'rgba(255, 255, 255, 0.75)' ,  color: (theme)=> theme.palette.text.secondary}}
+                sx={{ mt: 1, p: 2, width: { xs: "100%", sm: "500px" }, borderRadius: 1, backgroundColor: (theme)=> theme.palette.mode=="dark"? 'rgba(255, 255, 255, 0.28)':'rgba(255, 255, 255, 0.3)' ,  color: (theme)=> theme.palette.text.secondary}}
               >
                 <InputLabel 
                   htmlFor="shorten-label"
@@ -143,7 +133,7 @@ export default function Shorten() {
                   }}
                 />
                 <Button
-                  variant="contained"
+                  variant="outlined"
                   color="primary"
                   size="small"
                   sx={{ minWidth: "fit-content" }}
@@ -166,18 +156,13 @@ export default function Shorten() {
                   alignItems="center"
                   justifyContent="center"
                   spacing={1}
-                  sx={{ mt: 2, p: 2, width: { xs: "100%", sm: "500px" }, borderRadius: 1, backgroundColor: (theme)=> theme.palette.mode=="dark"? 'rgba(255, 255, 255, 0.28)':'rgba(255, 255, 255, 0.75)' ,  color: (theme)=> theme.palette.text.secondary}}
+                  sx={{ mt: 2, p: 2, width: { xs: "100%", sm: "500px" }, borderRadius: 1, backgroundColor: (theme)=> theme.palette.mode=="dark"? 'rgba(255, 255, 255, 0.3)':'rgba(255, 255, 255, 0.3)' ,  color: (theme)=> theme.palette.text.secondary}}
                   
                 >
-
                   <Typography variant="body1">
-                    <a
-                      href={shortenedUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {shortenedUrl}
-                    </a>
+                    <Link href={shortenedUrl} target="_blank" rel="noopener noreferrer" color="body2">
+                    {shortenedUrl}
+                    </Link>
                   </Typography>
                   <CopyToClipboard text={shortenedUrl}>
                     <IconButton size="small" aria-label="copy to clipboard">

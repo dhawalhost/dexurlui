@@ -1,11 +1,16 @@
 import { gray } from '../themePrimitives';
+import dark from '../../assets/background/dark2.jpg';
+import light from '../../assets/background/light5.jpg';
 /* eslint-disable import/prefer-default-export */
 export const surfacesCustomizations = {
   MuiCssBaseline: {
     styleOverrides: (themeParam) => ({
       body:{
-          backgroundColor: themeParam.palette.mode == 'dark'? '#111927':'#50E3C2',
-          backgroundImage: themeParam.palette.mode == 'dark' ? 'radial-gradient(at 47% 33%, hsl(162.14, 93%, 27%) 0, transparent 59%), radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%)':'radial-gradient(at 47% 33%, hsl(159.62, 77%, 40%) 0, transparent 59%), radial-gradient(at 82% 65%, hsl(198.00, 100%, 50%) 0, transparent 55%)',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundImage: themeParam.palette.mode == 'dark' ? `url(${dark})`:`url(${light})`,
       },
     })
   },
@@ -35,7 +40,7 @@ export const surfacesCustomizations = {
           borderBottomLeftRadius: (theme.vars || theme).shape.borderRadius,
           borderBottomRightRadius: (theme.vars || theme).shape.borderRadius,
         },
-        backdropFilter: 'blur(10px)',
+        backdropFilter: 'blur(24px)',
       }),
     },
   },
@@ -63,7 +68,6 @@ export const surfacesCustomizations = {
     },
     styleOverrides: {
       root: ({ theme }) => ({
-        // backdropFilter: 'blur(10px)',
         backgroundColor: ((theme.vars || theme).palette.background.default, 0.8),
       }),
     },
@@ -78,8 +82,9 @@ export const surfacesCustomizations = {
           backgroundColor: (gray[50], 0.8),
           borderRadius: (theme.vars || theme).shape.borderRadius,
           border: `1px solid ${(theme.vars || theme).palette.divider}`,
-          boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+          boxShadow: '0 4px 30px rgba(0, 0, 0, 0.2)',
           ...theme.applyStyles('dark', {
+            boxShadow: '0 4px 30px rgba(0, 0, 0, 0.4)',
             // backgroundColor: (gray[800], 0.8),
             ...theme.glassmorphism
           }),
